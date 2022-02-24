@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/space-tourism-react/static/css/main.81473847.css",
-    "main.js": "/space-tourism-react/static/js/main.12215362.js",
+    "main.js": "/space-tourism-react/static/js/main.77031b81.js",
     "static/media/image-moon.png": "/space-tourism-react/static/media/image-moon.d287d07182de3015952f.png",
     "static/media/image-europa.png": "/space-tourism-react/static/media/image-europa.3e95f7d0a16fe2ebf4c6.png",
     "static/media/image-mars.png": "/space-tourism-react/static/media/image-mars.1b224c8663251270d79f.png",
@@ -13,10 +13,10 @@
     "static/media/icon-close.svg": "/space-tourism-react/static/media/icon-close.d47fda63cbd8b3fedbbc1b2a53f64470.svg",
     "static/media/icon-hamburger.svg": "/space-tourism-react/static/media/icon-hamburger.5273efa7c50e96ef3e51e7a2b54048ce.svg",
     "main.81473847.css.map": "/space-tourism-react/static/css/main.81473847.css.map",
-    "main.12215362.js.map": "/space-tourism-react/static/js/main.12215362.js.map"
+    "main.77031b81.js.map": "/space-tourism-react/static/js/main.77031b81.js.map"
   },
   "entrypoints": [
     "static/css/main.81473847.css",
-    "static/js/main.12215362.js"
+    "static/js/main.77031b81.js"
   ]
 }
