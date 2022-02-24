@@ -16,7 +16,7 @@ function App() {
 
 	return (
 		<>
-			<Router>
+			<Router basename='/space-tourism-react'>
 				<Header
 					hamburgerVisible={hamburgerVisible}
 					setHamburgerVisible={setHamburgerVisible}

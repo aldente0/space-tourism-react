@@ -1,6 +1,7 @@
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import {Pagination, EffectFade } from 'swiper';
-import { useMemo,useEffect, useState} from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, EffectFade } from 'swiper';
+import { useMemo} from 'react';
+
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -8,7 +9,7 @@ import 'swiper/css/effect-fade';
 
 
 function SwiperSlider(props) {
-    const {collectionWithImg, currentSlide, setCurrentSlide} = props;
+    const {collectionWithImg, setCurrentSlide, planets} = props;
 
     const pagination = { 
         el: '.swiper__pagination',
@@ -50,7 +51,7 @@ function SwiperSlider(props) {
         >
           {collectionWithImg.map((planet, index) => (
                 <SwiperSlide  key={planet.images.png} className={planet.name} virtualIndex={index}>
-                     <img style={{width: '100%'}} src={planet.images.png} alt={planet.name} />
+                     <img style={{width: '100%'}} src={planets[index]} alt={planet.name} />
                 </SwiperSlide>
           ))}
           <div className="swiper__pagination">
