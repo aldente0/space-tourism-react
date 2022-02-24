@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { useState } from 'react';
+import { Home } from './pages/Home';
+import { Destination } from './pages/Destination';
+import { Header } from './components/UI/header/Header';
+import { Hamburger } from './components/UI/hamburger/Hamburger';
+import { data } from './data';
+import { Transition } from 'react-transition-group';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+	const [hamburgerVisible, setHamburgerVisible] = useState(false);
 
+	const handleClick = () => {
+		setHamburgerVisible(!hamburgerVisible);
+	};
+
+	return (
+		<>
+			<Router>
+				<Header
+					hamburgerVisible={hamburgerVisible}
+					setHamburgerVisible={setHamburgerVisible}
+				/>
+
+				<Transition
+					in={hamburgerVisible}
+					timeout={900}
+					mountOnEnter
+					unmountOnExit>
+					{(state) => (
+						<Hamburger
+							handleClick={handleClick}
+							className={`hamburger ${state}`}
+						/>
+					)}
+				</Transition>
+				<Switch>
+					<Route exact path='/' component={Home} />
+					<Route path='/destination' component={Destination} />
+					{/* <Route component={NotFound} /> */}
+				</Switch>
+			</Router>
+		</>
+	);
+}
 export default App;

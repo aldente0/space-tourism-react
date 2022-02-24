@@ -1,0 +1,13 @@
+.exploreBtn {
+	display: block;
+	margin: 0 auto;
+	margin-top: 80px;
+	padding-top: 62px;
+	font-weight: 700;
+	border-radius: 100%;
+	text-align: center;
+	color: #0b0d17;
+	background-color: #fff;
+	width: 150px;
+	height: 150px;
+}
