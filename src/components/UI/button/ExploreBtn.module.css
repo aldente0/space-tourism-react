@@ -1,8 +1,9 @@
 .exploreBtn {
-	display: block;
+	display: flex;
 	margin: 0 auto;
 	margin-top: 80px;
-	padding-top: 62px;
+	justify-content: center;
+	align-items: center;
 	font-weight: 700;
 	border-radius: 100%;
 	text-align: center;
@@ -10,4 +11,13 @@
 	background-color: #fff;
 	width: 150px;
 	height: 150px;
+	font-weight: normal;
+	font-size: 20px;
+	letter-spacing: 1.25px;
+	text-transform: uppercase;
+	border: 90px solid rgba(255, 255, 255, 0);
 }
+
+/* .exploreBtn:hover {
+	border: 90px solid rgba(255, 255, 255, 0.1);
+} */
