@@ -34,7 +34,7 @@ function CrewSlider(props) {
     return (
 
         <Swiper
-            className='swiper'
+            className='swiper swiper__crew'
             modules={[Pagination]}
             autoHeight
             spaceBetween={50}
@@ -57,11 +57,15 @@ function CrewSlider(props) {
                     <div className="divider__slider"></div>
                 </SwiperSlide>
           ))}
-          <div className="pageTextAndPagination">
+          <div className="pageTextAndPagination pageTextAndPagination__crew">
             <div className="swiper__pagination team__pagination">
             </div>
 
-            <PageMainText description={persInfo.bio} role={persInfo.role}  fullName={persInfo.name}/>
+            <PageMainText
+            className='crew__text'
+            description={persInfo.bio}
+            role={persInfo.role} 
+            fullName={persInfo.name}/>
           </div>
           
         </Swiper>

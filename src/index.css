@@ -19,6 +19,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+nav ul {
+	position: relative;
+}
+
 h1 {
 	margin-top: 0;
 }
@@ -43,6 +47,10 @@ header {
 	top: 24px;
 	left: 50%;
 	transform: translateX(-50%);
+}
+
+nav ul a:hover {
+	background: rgba(0, 0, 0, 0);
 }
 
 .hamburger {
@@ -161,6 +169,8 @@ nav,
 
 .page__uptitle {
 	color: var(--uptitle-home-color);
+	text-transform: uppercase;
+	font-size: 20px;
 }
 
 .page__uptitle span {
@@ -172,6 +182,10 @@ nav,
 
 .page__title {
 	color: var(--uptitle-home-color);
+}
+
+.page__title_main {
+	color: #ffffff;
 }
 
 .page__descr {
@@ -211,6 +225,14 @@ nav,
 .destination {
 	background: url('../public/img/destination-bg/background-destination-mobile.jpg')
 		center center/cover no-repeat;
+}
+
+.destination__pagination {
+	max-width: 285px;
+	width: 70% !important;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
 }
 
 .divider {
@@ -261,6 +283,7 @@ nav,
 	font-size: 14px;
 	position: relative;
 	cursor: pointer;
+	text-transform: uppercase;
 }
 
 @media (min-width: 1023px) {
@@ -369,7 +392,9 @@ nav,
 	justify-content: space-between;
 	margin: 0 auto;
 	margin-top: 30px;
-	max-width: 70%;
+}
+.swiper__pagination.tecnology__pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+	max-width: 160px;
 }
 
 .swiper__pagination.team__pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -381,11 +406,138 @@ nav,
 		center/cover no-repeat;
 }
 
-@media (min-width: 520px) {
+.swiper.swiper__crew .swiper-wrapper .swiper-slide {
+	width: 100%;
+}
+
+img.Douglas {
+	max-width: 342px;
+	width: 70% !important;
+}
+
+img.Mark {
+	max-width: 288px;
+}
+
+img.Victor {
+	max-width: 314px;
+}
+
+img.Anousheh {
+	max-width: 341px;
+}
+
+.swiper__destination .swiper-wrapper .swiper-slide img {
+	width: 65% !important;
+	max-width: 445px;
+}
+
+@media (min-width: 570px) {
+	.swiper.swiper__crew .swiper-wrapper .swiper-slide {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.page__fullName {
+		font-size: 35px;
+	}
+
+	.page__role {
+		font-size: 25px;
+	}
+
+	.page__descr {
+		font-size: 16px;
+	}
+
+	.crew__text {
+		order: -1;
+	}
+
+	.pageTextAndPagination__crew {
+		order: -1;
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	img.Douglas {
+		max-width: 420px;
+		width: 70%;
+	}
+
+	img.Mark {
+		width: 50% !important;
+		max-width: 388px;
+	}
+
+	img.Victor {
+		max-width: 370px;
+		width: 60% !important;
+	}
+
+	img.Anousheh {
+		max-width: 380px;
+		width: 60% !important;
+	}
+
+	.page {
+		padding-top: 96px;
+		text-align: left;
+	}
 	.home {
 		background: url('../public/img/home-bg/background-home-tablet.jpg')
 			center center/cover no-repeat;
+		text-align: center;
 	}
+	.home .page__descr {
+		text-align: center;
+	}
+	.crew {
+		background: url('../public/img/crew-bg/background-crew-tablet.jpg')
+			center center/cover no-repeat;
+		padding-bottom: 0;
+	}
+	.destination {
+		background: url('../public/img/destination-bg/background-destination-tablet.jpg')
+			center center/cover no-repeat;
+	}
+
+	.page .page__uptitle {
+		margin-top: 50px;
+	}
+	.technology {
+		background: url('../public/img/technology-bg/background-technology-tablet.jpg')
+			center center/cover no-repeat;
+	}
+
+	.swiper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.swiper.swiper__crew {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.swiper__destination .swiper-wrapper .swiper-slide {
+		width: 100% !important;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.swiper__destination .swiper-wrapper .swiper-slide img {
+		width: 55% !important;
+		max-width: 445px;
+	}
+
 	header {
 		display: flex;
 		align-items: center;
@@ -395,12 +547,77 @@ nav,
 		top: 0;
 	}
 
+	.swiper__pagination.tecnology__pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+		max-width: 170px;
+	}
+
+	.paginationTechnology__elem {
+		width: 45px;
+		height: 45px;
+	}
+
+	.pageTextAndPagination {
+		text-align: center;
+		max-width: 458px;
+	}
+
+	.pageTextAndPagination.pageTextAndPagination__destination {
+		max-width: 537px;
+		margin: 0 auto;
+	}
+
+	.paginationPlanet__elem {
+		padding-top: 0;
+		font-size: 16px;
+	}
+
+	.destination__travel {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	header {
+		height: 96px;
+		top: 0;
+		width: 100%;
+	}
+
+	nav .brand-logo.left {
+		left: 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	nav ul a {
+		padding: 0;
+	}
+
 	nav ul li.mobile {
 		display: none;
 	}
 
 	nav ul li.dekstop {
+		position: relative;
 		display: block;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		padding: 0 15px;
+		justify-content: center;
+		text-transform: uppercase;
+		letter-spacing: 2.3625px;
+	}
+
+	nav ul li.dekstop.dekstop_active::before {
+		content: '';
+		height: 3px;
+		left: 15px;
+		right: 15px;
+		position: absolute;
+		bottom: 0;
+		background: white;
+		z-index: 2;
 	}
 
 	.transparent {
@@ -418,8 +635,11 @@ nav,
 		height: 100%;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		background: rgba(255, 255, 255, 0.04);
 		backdrop-filter: blur(81.5485px);
+		min-width: 450px;
+		width: 65%;
 	}
 
 	.home__text {
@@ -431,5 +651,9 @@ nav,
 	.page__title_main {
 		font-weight: normal;
 		font-size: 150px;
+	}
+
+	.divider__slider {
+		display: none;
 	}
 }

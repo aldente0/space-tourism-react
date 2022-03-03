@@ -1,6 +1,6 @@
-function PageMainText({description, title, fullName, role, underSliderTecnology}) {
+function PageMainText({description, title, fullName, role, underSliderTecnology, className}) {
     return (
-        <div className="pageMainText">
+        <div className={'pageMainText' + ' ' + className}>
             {title && <h1 key={title} className='page__title animate__animated animate__fadeInDown'>{title}</h1>}
             {role && <span key={role} className="page__role">{role}</span>}
             {underSliderTecnology && <h6 className="page__underSlider">THE TERMINOLOGY…</h6>}

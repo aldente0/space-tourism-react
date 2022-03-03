@@ -36,11 +36,11 @@ function DestinationSlider(props) {
     return (
 
         <Swiper
-            className='swiper'
+            className='swiper swiper__destination'
             modules={[Pagination, EffectFade]}
             autoHeight
             effect='fade'
-            spaceBetween={50}
+            spaceBetween={200}
             pagination={pagination}
             slidesPerView={1}
             onSlideChange={(swiper) => {
@@ -70,11 +70,12 @@ function DestinationSlider(props) {
                 </SwiperSlide>
             ))}
 
-            <div className="pageTextAndPagination">
-                <div className="swiper__pagination">
+            <div className="pageTextAndPagination pageTextAndPagination__destination">
+                <div className="swiper__pagination destination__pagination">
                 </div>
 
                 <PageMainText
+                className='destination__text'
                 description={planetInfo.description}
                 title={planetInfo.name}
                 />

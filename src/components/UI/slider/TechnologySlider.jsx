@@ -34,7 +34,7 @@ function TechnologySlider(props) {
     return (
 
         <Swiper
-            className='swiper'
+            className='swiper swiper__technology'
             modules={[Pagination, EffectFade]}
             autoHeight
             effect='fade'
@@ -58,12 +58,16 @@ function TechnologySlider(props) {
                     <img style={{width: '100%'}}  className={item.name} src={images[index]} alt={item.name} />
                 </SwiperSlide>
           ))}
-          <div className="pageTextAndPagination container">
+          <div className="pageTextAndPagination pageTextAndPagination__technology container">
             
             <div className="swiper__pagination tecnology__pagination">
             </div>
 
-            <PageMainText underSliderTecnology={true} description={technologyInfo.description} fullName={technologyInfo.name}/>
+            <PageMainText
+            className='technology__text'
+            underSliderTecnology={true}
+            description={technologyInfo.description}
+            fullName={technologyInfo.name}/>
           </div>
           
         </Swiper>

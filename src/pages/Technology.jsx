@@ -27,7 +27,7 @@ function Technology() {
     return (
         <div className="crew page">
             
-            <h5 className='page__uptitle'><span>03</span> Space Launch 101</h5>
+            <h5 className='page__uptitle container'><span>03</span> Space Launch 101</h5>
             <div className="">
                 <TechnologySlider
                 technologyInfo={technologyInfo}
