@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/space-tourism-react/static/css/main.b0c638fd.css",
+    "main.css": "/space-tourism-react/static/css/main.a8a2ffdd.css",
     "main.js": "/space-tourism-react/static/js/main.a8fcfe01.js",
     "static/media/BarlowCondensed-Bold.svg": "/space-tourism-react/static/media/BarlowCondensed-Bold.314c6421a94bbf27d2bd.svg",
     "static/media/BarlowCondensed-Regular.svg": "/space-tourism-react/static/media/BarlowCondensed-Regular.dace142ee873c80e0926.svg",
@@ -46,11 +46,11 @@
     "static/media/logo-main.svg": "/space-tourism-react/static/media/logo-main.565f7f2c0534403f11b71994f4311210.svg",
     "static/media/icon-close.svg": "/space-tourism-react/static/media/icon-close.d47fda63cbd8b3fedbbc1b2a53f64470.svg",
     "static/media/icon-hamburger.svg": "/space-tourism-react/static/media/icon-hamburger.5273efa7c50e96ef3e51e7a2b54048ce.svg",
-    "main.b0c638fd.css.map": "/space-tourism-react/static/css/main.b0c638fd.css.map",
+    "main.a8a2ffdd.css.map": "/space-tourism-react/static/css/main.a8a2ffdd.css.map",
     "main.a8fcfe01.js.map": "/space-tourism-react/static/js/main.a8fcfe01.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0c638fd.css",
+    "static/css/main.a8a2ffdd.css",
     "static/js/main.a8fcfe01.js"
   ]
 }
