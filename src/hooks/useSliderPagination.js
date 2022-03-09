@@ -1,4 +1,4 @@
-import { useMemo } from 'react/cjs/react.development';
+import { useMemo } from 'react';
 
 function useSliderPagination(collectionWithImg, type = 'default') {
 	const sliderPaginationElems = useMemo(() => {

@@ -280,7 +280,7 @@ nav,
 
 .crew__pagination {
 	height: 20px;
-	width: 100px;
+	width: 100px !important;
 	display: flex;
 	justify-content: space-between;
 	margin: 0 auto;
@@ -544,6 +544,7 @@ img.Anousheh {
 	}
 
 	.paginationPlanet__elem {
+		letter-spacing: 2.7px;
 		padding-top: 0;
 		font-size: 16px;
 	}
@@ -765,6 +766,10 @@ img.Anousheh {
 
 	.destination__pagination {
 		margin: 0;
+	}
+
+	.paginationPlanet__elem {
+		font-size: 18px;
 	}
 
 	.destination__travel {
