@@ -39,9 +39,9 @@ function App() {
 				</Transition>
 				<Switch>
 					<Route exact path='/' component={Home} />
-					<Route path='/destination' component={Destination} />
-					<Route path='/crew' component={Crew} />
-					<Route path='/technology' component={Technology} />
+					<Route path='/destination/' component={Destination} />
+					<Route path='/crew/' component={Crew} />
+					<Route path='/technology/' component={Technology} />
 				</Switch>
 			</Router>
 		</>

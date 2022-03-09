@@ -11,11 +11,12 @@ function Header({hamburgerVisible, setHamburgerVisible}) {
             <nav className="transparent">
                 <div className="nav-wrapper ">
                     <Link to='/' className="brand-logo left"><img src={logo} alt="logo" /></Link>
+                    <div className="divider-header"></div>
                     <ul id="nav__pages ul" className="right">
-                        <li className={location === '/' ? 'dekstop dekstop_active' : 'dekstop'}><Link to='/'>Home</Link></li>
-                        <li className={location === '/destination' ? 'dekstop dekstop_active' : 'dekstop'}><Link to='/destination'>Destination</Link></li>
-                        <li className={location === '/crew' ? 'dekstop dekstop_active' : 'dekstop'}><Link to="/crew" >Crew</Link></li>
-                        <li className={location === '/technology' ? 'dekstop dekstop_active' : 'dekstop'}><Link to="/technology" >Technology</Link></li>
+                        <li className={location === '/' ? 'dekstop dekstop_active' : 'dekstop'}><Link to='/'><span>00</span> Home</Link></li>
+                        <li className={location === '/destination' ? 'dekstop dekstop_active' : 'dekstop'}><Link to='/destination'><span>01</span> Destination</Link></li>
+                        <li className={location === '/crew' ? 'dekstop dekstop_active' : 'dekstop'}><Link to="/crew" ><span>02</span> Crew</Link></li>
+                        <li className={location === '/technology' ? 'dekstop dekstop_active' : 'dekstop'}><Link to="/technology" ><span>03</span> Technology</Link></li>
                         <li className="mobile" onClick={() => setHamburgerVisible(!hamburgerVisible)}>
                             {
                                 !hamburgerVisible ? <img src={mobileMenuIcon} alt="hamburger"/>

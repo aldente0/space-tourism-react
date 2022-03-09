@@ -1,19 +1,34 @@
 import { useState, useEffect} from "react";
 
-import { TechnologySlider } from "../components/UI/slider/TechnologySlider";
+import data from '../data.json';
+import { sliderPaginationParameters } from "../utils/sliderPaginationParameters";
+import { useSliderPagination } from "../hooks/useSliderPagination";
+import { Slider } from "../components/UI/slider/Slider";
 
-import { data } from "../data";
-
-import launch from '../assets/technology/image-launch-vehicle-landscape.jpg';
-import spaceport from '../assets/technology/image-spaceport-landscape.jpg'
-import capsule from '../assets/technology/image-space-capsule-landscape.jpg';
+import launchMobile from '../assets/technology/image-launch-vehicle-landscape.jpg';
+import spaceportMobile from '../assets/technology/image-spaceport-landscape.jpg'
+import capsuleMobile from '../assets/technology/image-space-capsule-landscape.jpg';
+import launchDesktop from '../assets/technology/image-launch-vehicle-portrait.jpg';
+import spaceportDesktop from '../assets/technology/image-spaceport-portrait.jpg'
+import capsuleDesktop from '../assets/technology/image-space-capsule-portrait.jpg';
 
 
 function Technology() {
 
     const [technologyInfo, setInfo] = useState({});
     const [currentTechnology, setCurrentTechnology] = useState('Launch');
-    const [technologies, setTechnologies] = useState([launch, spaceport, capsule]);
+    const [technologies, setTechnologies] = useState([]);
+    const [isDesktopScreen, setIsDesktopScreen] = useState(window.innerWidth >= 1023);
+
+    const sliderPagination = useSliderPagination(data.technology, 'number');
+
+    const handleWidth = () => {
+        if (window.innerWidth >= 1023) {
+            setIsDesktopScreen(true)
+        } else {
+            setIsDesktopScreen(false)
+        }
+    }
 
     useEffect(() => {
         if (currentTechnology === 'Space') {
@@ -24,13 +39,32 @@ function Technology() {
         
     }, [currentTechnology])
 
+    useEffect(() => {
+        setTechnologies(isDesktopScreen ? [launchDesktop, spaceportDesktop, capsuleDesktop]
+            : [launchMobile, spaceportMobile, capsuleMobile])
+    }, [isDesktopScreen])
+
+    useEffect(() => {
+        window.addEventListener('resize', handleWidth);
+
+        return function () {
+            window.removeEventListener('resize', handleWidth);
+        }
+    }, [])
+
     return (
-        <div className="crew page">
+        <div className="technology page">
             
             <h5 className='page__uptitle container'><span>03</span> Space Launch 101</h5>
             <div className="">
-                <TechnologySlider
-                technologyInfo={technologyInfo}
+                <Slider
+                effect='fade'
+                underSliderTecnology={true}
+                description={technologyInfo.description}
+                fullName={technologyInfo.name}
+                paginationParametrs={sliderPaginationParameters('Technology', sliderPagination)}
+                textClassName='technology'
+                slideInfo={technologyInfo}
                 images={technologies}
                 currentSlide={currentTechnology}
                 collectionWithImg={data.technology}

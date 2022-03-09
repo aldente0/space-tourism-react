@@ -1,0 +1,40 @@
+@font-face {
+	font-family: 'BarlowCondensed';
+	src: url('../../fonts/BarlowCondensed-Regular.eot');
+	src: local('☺'),
+		url('../../fonts/BarlowCondensed-Regular.woff') format('woff'),
+		url('../../fonts/BarlowCondensed-Regular.ttf') format('truetype'),
+		url('../../fonts/BarlowCondensed-Regular.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BarlowCondensed';
+	src: url('../../fonts/BarlowCondensed-Bold.eot');
+	src: local('☺'), url('../../fonts/BarlowCondensed-Bold.woff') format('woff'),
+		url('../../fonts/BarlowCondensed-Bold.ttf') format('truetype'),
+		url('../../fonts/BarlowCondensed-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Barlow';
+	src: url('../../fonts/Barlow-Regular.eot');
+	src: local('☺'), url('../../fonts/Barlow-Regular.woff') format('woff'),
+		url('../../fonts/Barlow-Regular.ttf') format('truetype'),
+		url('../../fonts/Barlow-Regular.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Barlow';
+	src: url('../../fonts/Barlow-Bold.eot');
+	src: local('☺'), url('../../fonts/Barlow-Bold.woff') format('woff'),
+		url('../../fonts/Barlow-Bold.ttf') format('truetype'),
+		url('../../fonts/Barlow-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}

@@ -1,0 +1,82 @@
+.hamburger {
+	position: fixed;
+	left: 30%;
+	top: 0;
+	bottom: 0;
+	text-align: left;
+	bottom: calc(-100vh);
+	right: 0px;
+	z-index: 10;
+	background: rgba(255, 255, 255, 0.04);
+	backdrop-filter: blur(37.5485px);
+	padding: 35px 0 35px 25px;
+}
+
+.hamburger.entering {
+	animation: show-mobile-menu 1s forwards;
+}
+
+.hamburger.exiting {
+	animation: show-mobile-menu 1s reverse;
+}
+
+@keyframes show-mobile-menu {
+	0% {
+		opacity: 0;
+		left: 60%;
+	}
+	100% {
+		opacity: 1;
+		left: 30%;
+	}
+}
+
+@keyframes close-mobile-menu {
+	0% {
+		left: 30%;
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		left: 60%;
+	}
+}
+
+.hamburger__close {
+	z-index: 15;
+	position: absolute;
+	right: 26px;
+}
+
+.hamburger__elems {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-top: 65px;
+}
+
+.hamburger__elem {
+	display: block;
+}
+
+.hamburger a {
+	font-family: 'BarlowCondensed';
+	font-weight: 400;
+	position: relative;
+	color: #ffffff;
+	margin-top: 30px;
+}
+
+.hamburger a span {
+	font-weight: 700;
+}
+
+.hamburger a.active::after {
+	content: '';
+	height: 30px;
+	width: 2px;
+	background: #fff;
+	position: absolute;
+	right: 0;
+	bottom: -5px;
+}
